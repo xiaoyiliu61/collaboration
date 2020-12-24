@@ -10,6 +10,7 @@ func main() {
 
 	fmt.Println("hello world")
 	fmt.Println("hello liuYi")
+	fmt.Println("hello luxiaoyan")
 	beego.Run()
 
 }
