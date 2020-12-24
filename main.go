@@ -7,10 +7,10 @@ import (
 )
 
 func main() {
-	beego.Run()
+
 	fmt.Println("hello world")
 	fmt.Println("hello liuYi")
-
+	beego.Run()
 
 }
 
