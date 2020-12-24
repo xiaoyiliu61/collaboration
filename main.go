@@ -9,6 +9,10 @@ import (
 func main() {
 	beego.Run()
 	fmt.Println("hello world")
+
 	fmt.Println("hi my name is zihanhu")
+
+	fmt.Println("hello liuYi")
+
 }
 
