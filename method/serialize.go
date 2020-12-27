@@ -5,12 +5,14 @@ import (
 	"fmt"
 )
 
+
+/**
+ * 序列化操作
+ * @Sb:用于接收[]byte进行序列化
+ */
 type Sb struct {
 	A []byte
 }
-/**
- * 序列化操作
- */
 func serialize() string {
 	s := Sb{}
 	a, err := json.Marshal(s)
@@ -20,12 +22,14 @@ func serialize() string {
 	return string(a)
 }
 
+
+/**
+ * 反序列化
+ * @Sp:勇于接受反序列化的数据
+ */
 type Sp struct {
 	data []byte
 }
-/**
- * 反序列化
- */
 func deSerialization() Sp {
 	var P Sp
 	var d []byte
