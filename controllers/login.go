@@ -24,7 +24,10 @@ func (l *LoginController) Post() {
 	}
 
 	//2、根据解析到的数据,执行数据库查询操作
-	u, err := user.QueryUser()
+	err = user.QueryUser()
+	if err != nil {
+		fmt.Println(err.Error())
+	}
 
 	//3、判断数据库查询结果
 	if err != nil {

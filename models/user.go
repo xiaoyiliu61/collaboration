@@ -36,7 +36,7 @@ func (u User) AddUser() (int64, error) {
 /**
  * 查询用户信息
  */
-func (u User) QueryUser() (*User, error) {
+func (u User) QueryUser() error {
 
 	//把脱敏的密码的md5值重新赋值为密码进行存储
 	u.Password = utils.MD5HashString(u.Password)
@@ -46,7 +46,7 @@ func (u User) QueryUser() (*User, error) {
 
 	err := row.Scan(&u.Phone)
 	if err != nil {
-		return nil, err
+		return err
 	}
-	return &u, nil
+	return nil
 }
