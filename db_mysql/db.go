@@ -7,9 +7,6 @@ import (
 )
 var Db *sql.DB
 
-
-
-
 /**
  * 数据库连接
  */
