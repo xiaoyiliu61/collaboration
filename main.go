@@ -12,9 +12,15 @@ func main() {
 
 	fmt.Println("hello liuYi")
 
+
 	fmt.Println("hi my name is zihanhu")
 
+
 	fmt.Println("zailaiyici_hu")
+
+
+	fmt.Println("hello luxiaoyan")
+
 
 	beego.Run()
 

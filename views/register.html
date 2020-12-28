@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<link type="text/css" rel="stylesheet" href="/jsjis/ui/css/global.css"/>
-<script type="text/javascript" src="/jsjis/ui/lib/jquery/jquery.min.js"></script>
-<link type="text/css" rel="stylesheet" href="/jsjis/ui/widgets/scrollup/css/themes/image.css"/>
-<script type="text/javascript" src="/jsjis/ui/widgets/scrollup/js/jquery.scrollUp.min.js"></script>
-<script type="text/javascript" src="/jsjis/ui/widgets/hanweb/ie6fixed/ie6fixed.js"></script>
-<script type="text/javascript" src="/jsjis/ui/widgets/cookie/jquery.cookie.js"></script>
-<link type="text/css" rel="stylesheet" href="/jsjis/ui/css/page.css"/>
-<script type="text/javascript" src="/jsjis/ui/script/ui.js"></script>
-<script type="text/javascript" src="/jsjis/ui/script/page.js"></script>
-<script type="text/javascript" src="/jsjis/ui/widgets/hanweb/easyui/locale/easyui-lang-zh_CN.js"></script>
-<script type="text/javascript" src="/jsjis/ui/lib/easyui/plugins/jquery.parser.js"></script>
-<link type="text/css" rel="stylesheet" href="/jsjis/ui/lib/easyui/themes/bootstrap/linkbutton.css"/>
-<script type="text/javascript" src="/jsjis/ui/lib/easyui/plugins/jquery.linkbutton.js"></script>
-<script type="text/javascript" src="/jsjis/ui/lib/easyui/plugins/jquery.resizable.js"></script>
-<script type="text/javascript" src="/jsjis/ui/lib/easyui/plugins/jquery.draggable.js"></script>
-<link type="text/css" rel="stylesheet" href="/jsjis/ui/lib/easyui/themes/bootstrap/panel.css"/>
-<script type="text/javascript" src="/jsjis/ui/lib/easyui/plugins/jquery.panel.js"></script>
-<link type="text/css" rel="stylesheet" href="/jsjis/ui/lib/easyui/themes/bootstrap/window.css"/>
-<script type="text/javascript" src="/jsjis/ui/lib/easyui/plugins/jquery.window.js"></script>
-<link type="text/css" rel="stylesheet" href="/jsjis/ui/lib/easyui/themes/bootstrap/messager.css"/>
-<script type="text/javascript" src="/jsjis/ui/lib/easyui/plugins/jquery.messager.js"></script>
-<link type="text/css" rel="stylesheet" href="/jsjis/ui/widgets/hanweb/validity/css/validity.css"/>
+<link type="text/css" rel="stylesheet"  />
+<script type="text/javascript"  ></script>
+<link type="text/css" rel="stylesheet"  />
+<script type="text/javascript"  ></script>
+<script type="text/javascript" ></script>
+<script type="text/javascript"  ></script>
+<link type="text/css" rel="stylesheet"  >
+<script type="text/javascript"  ></script>
+<script type="text/javascript"  ></script>
+<script type="text/javascript"  ></script>
+<script type="text/javascript"  ></script>
+<link type="text/css" rel="stylesheet"  />
+<script type="text/javascript"  ></script>
+<script type="text/javascript"  ></script>
+<script type="text/javascript" ></script>
+<link type="text/css" rel="stylesheet"  />
+<script type="text/javascript" ></script>
+<link type="text/css" rel="stylesheet"  />
+<script type="text/javascript"  ></script>
+<link type="text/css" rel="stylesheet"  />
+<script type="text/javascript"  ></script>
+<link type="text/css" rel="stylesheet"  />
 <script type="text/javascript" src="/jsjis/ui/widgets/validity/validity.js"></script>
 <script type="text/javascript" src="/jsjis/ui/widgets/hanweb/validity/validity.js"></script>
 <link type="text/css" rel="stylesheet" href="/jsjis/ui/lib/easyui/themes/bootstrap/pagination.css"/>
@@ -97,8 +97,7 @@
         };
 
         $(function(){
-            var headjs = "https://www.jszwfw.gov.cn/script/12/2010151134015515.js";
-            var footjs = "https://www.jszwfw.gov.cn/script/12/2009091010398361.js";
+
             if (headjs != '') {
                 $("#top").css("display","none");
                 $("#bt-footer").css("display","none");
@@ -504,7 +503,7 @@
     </div>
     <div class="zc_01 clearfloat" style="margin-top: -70px;">
         <!-- <div class="zhxx">账号信息</div> -->
-        <form action="doperregister.do" class="zc_01_03 clearfloat"  method="post" style="margin-bottom: 100px; margin: auto">
+        <form action="/login" class="zc_01_03 clearfloat"  method="post" style="margin-bottom: 100px; margin: auto">
             <input id="appmark" name="appmark" type="hidden" class="db_input" value="${appmark}">
             <input id="enc_name" type="hidden" name="userName">
             <input id="enc_password" type="hidden" name="password">
@@ -555,23 +554,9 @@
             </p>
 
 
-            <div class="zc_01_31 clearfloat"> <span>手机号码：<font color="#fe4242">*</font></span>
-                <input type="text" value="" id="mobile" name="mobile" placeholder="请填写正确手机号码" maxlength="11">
-            </div>
-            <div class="zc_01_31  verification_code clearfloat">
-                <span>图片验证码：<font color="#fe4242">*</font></span>
-                <input id="randCode" name="randCode" type="text" style="width: 300px;" placeholder="请填写正确的图片验证码" maxlength="4">
-                <div class="yanzhenma">
-                    <div class="content" style="cursor:pointer;">
-                        <div style="height: 35px;width: 116px;"><img id='verifyImg' src='../../component/verifyCode.do?code=4&var=rand&width=142&height=40&random=96771245' onclick="this.src='../../component/verifyCode.do?code=4&var=rand&width=142&height=40&random='+ Math.random();" style='cursor:pointer' class= "check_code_img" /></div>
-                    </div>
-                </div>
-            </div>
-            <div class="zc_01_31 clearfloat"> <span>短信验证码：<font color="#fe4242">*</font></span>
-                <input type="text" id="mobileRandCode" name="mobileRandCode" placeholder="请填写正确的短信验证码" class="zc_01_31_yzm" maxlength="6">
-                <div id="sendMobileCode" class="message_number" onclick="sendCode();">获取短信验证码</div>
-                <div type="button" id="sendMobileCodeTime" style="margin-left: -195px;width: 153px;display:none;"></div>
-            </div>
+
+
+
             <!-- <div class="zc_01_31 clearfloat"> <span>用户名：<font color="#fe4242">*</font></span>
               <input id="loginId" type="text" placeholder="长度为4-30个字符，支持字母和数字组成，字母开头" maxlength="30">
             </div> -->

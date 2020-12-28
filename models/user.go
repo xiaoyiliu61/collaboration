@@ -7,7 +7,6 @@ import (
 
 type User struct {
 	Id       int    `form:"id"`
-	Phone    string `form:"phone"`
 	Username     string `form:"Username"`
 	Password string `form:"password"`
 
@@ -18,8 +17,8 @@ func (u User) AddUser() (int64, error) {
 	//脱敏
 	u.Password = utils.MD5HashString(u.Password) //把脱敏的密码的md5值重新赋值为密码进行存储
 
-	rs, err := db_mysql.Db.Exec("insert into user(phone) values(?)",
-		u.Phone)
+	rs, err := db_mysql.Db.Exec("insert into user(Username) values(?)",
+		u.Username)
 	//错误早发现早解决
 	if err != nil { //保存数据遇到错误
 		return -1, err
@@ -41,10 +40,10 @@ func (u User) QueryUser() error {
 	//把脱敏的密码的md5值重新赋值为密码进行存储
 	u.Password = utils.MD5HashString(u.Password)
 
-	row := db_mysql.Db.QueryRow("select phone from user where phone = ? and password = ?",
-		u.Phone, u.Password)
+	row := db_mysql.Db.QueryRow("select phone from user where Username = ? and password = ?",
+		 u.Password)
 
-	err := row.Scan(&u.Phone)
+	err := row.Scan(&u.Username)
 	if err != nil {
 		return err
 	}
