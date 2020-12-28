@@ -7,5 +7,5 @@ type IndexController struct {
 }
 
 func (I *IndexController) Get() {
-	I.TplName="index.html"
+	I.TplName="bitDirectory.html"
 }
