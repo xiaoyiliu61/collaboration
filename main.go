@@ -19,16 +19,13 @@ func main() {
 	beego.SetStaticPath("/img", "./static/img")
 
 
-<<<<<<< HEAD
 
-	fmt.Println("hello luxiaoyan")
 
-	db_mysql.Connect()
+
 
 	beego.Run()
-=======
-	beego.Run() //阻塞
->>>>>>> remotes/origin/huzihan
+
+
 
 }
 
