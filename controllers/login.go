@@ -24,10 +24,7 @@ func (l *LoginController) Post() {
 	}
 
 	//2、根据解析到的数据,执行数据库查询操作
-	err = user.QueryUser()
-	if err != nil {
-		fmt.Println(err.Error())
-	}
+	u, err := user.QueryUser()
 
 	//3、判断数据库查询结果
 	if err != nil {
@@ -36,9 +33,8 @@ func (l *LoginController) Post() {
 		l.Ctx.WriteString("抱歉，用户登录失败，请重试")
 		return
 	}
-
-	//4、根据查询结果返回客户端相应的信息或者页面跳转
-
-	l.TplName = "dirctory.html"   // 文件上传界面{{.Phone}
+	l.Data["Username"] = u.Username
+	fmt.Println("跳转到bitDirectory页面")
+	l.TplName = "bitDirectory.html"   // 文件上传界面{{.Phone}
 }
 
