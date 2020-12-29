@@ -9,14 +9,19 @@ type User struct {
 	Id       int    `form:"id"`
 	Username     string `form:"username"`
 	Password string `form:"password"`
-
-
 }
+
+type User1 struct {
+	Userid int `form:"userid"`
+	Userpwd string `form:"userpwd"`
+}
+
 
 /**
 将用户信息保存到数据库中
  */
 func (u User) AddUser() (int64, error) {
+
 	//脱敏
 	u.Password = utils.MD5HashString(u.Password) //把脱敏的密码的md5值重新赋值为密码进行存储
 

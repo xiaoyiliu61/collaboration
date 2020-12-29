@@ -3,7 +3,7 @@ package db_mysql
 import (
 	"database/sql"
 	"github.com/astaxie/beego"
-	_ "github.com/github.com/go-sql-driver/mysql"
+	_ "github.com/go-sql-driver/mysql"
 )
 var Db *sql.DB
 
