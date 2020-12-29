@@ -6,6 +6,6 @@ type DirectoryController struct {
 	beego.Controller
 }
 
-func (D *DirectoryController) Post() {
+func (D *DirectoryController)Post() {
 	D.TplName="bitDirectory.html"
 }

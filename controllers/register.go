@@ -7,5 +7,5 @@ type RegisterController struct {
 }
 
 func (R *RegisterController) Post() {
-	R.TplName="login.html"
+	R.TplName="register.html"
 }

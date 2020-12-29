@@ -1,28 +1,25 @@
 package main
 
 import (
+	"collaboration/db_mysql"
 	_ "collaboration/routers"
-	"fmt"
 	"github.com/astaxie/beego"
 )
 
 func main() {
 
-	fmt.Println("hello world")
+	//连接数据库
+	db_mysql.Connect()
 
-	fmt.Println("hello liuYi")
+	//设置静态资源文件映射
+	beego.SetStaticPath("/register.html", "./views/register.html")
 
-
-	fmt.Println("hi my name is zihanhu")
-
-
-	fmt.Println("zailaiyici_hu")
-
-
-	fmt.Println("hello luxiaoyan")
+	beego.SetStaticPath("/js", "./static/js")
+	beego.SetStaticPath("/css", "./static/css")
+	beego.SetStaticPath("/img", "./static/img")
 
 
-	beego.Run()
+	beego.Run() //阻塞
 
 }
 

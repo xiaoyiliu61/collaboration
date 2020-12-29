@@ -4940,7 +4940,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>{{/*
             <div class="fieq4h-0 eGdsW">
                 <div class="rjh6gp-0 eJQZzB">
                     <div class="mi5l74-0 cPrUzc">
@@ -5000,10 +5000,35 @@
                             <div width="150px" class="sc-13odf5y-0 DwevN"><span
                                         class="sc-1ryi78w-0 cILyoi sc-16b9dsl-1 ZwupP sc-1n72lkw-0 ebXUGH" opacity="1">Size</span>
                             </div>
-                            <div width="100%" class="sc-6nt7oh-0 PtIAf"><span
+                            <div width="100%"  "><span
                                         class="sc-1ryi78w-0 cILyoi sc-16b9dsl-1 ZwupP u3ufsr-0 eQTRKC" opacity="1">区块大小</span>
                             </div>
                         </div>
+
+                    </div>*/}}
+                    <div {{/*id="showcontent"*/}} class="sc-1g6z4xm-0 hXyplo"  >
+                        <table {{/*class="movies"*/}}  class="sc-6nt7oh-0 PtIAf">
+                            <tr>
+                                <td class="table_header">高度</td>
+                                <td class="table_header">hash值</td>
+                                <td class="table_header">开采时间</td>
+                                <td class="table_header">矿工</td>
+                                <td class="table_header">区块大小</td>
+
+                            </tr>
+                            {{range .AllLols}}
+                                <tr>
+
+                                    <td class="table_body">{{.HeroId}}</td>
+                                    <td class="table_body">{{.Name}}</td>
+                                    <td class="table_body">{{.Alias}}</td>
+                                    <td class="table_body">{{.Title}}</td>
+                                    <td class="table_body">{{.Attack}}</td>
+
+
+                                </tr>
+                            {{end}}
+                        </table>
                     </div>
 
                     <div class="yi4g27-0 lhGqdm"><a selected="" href="/btc/blocks?page=1"
