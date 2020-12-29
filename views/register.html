@@ -1,6 +1,50 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
+=======
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<link type="text/css" rel="stylesheet"/>
+<script type="text/javascript"></script>
+<link type="text/css" rel="stylesheet"/>
+<script type="text/javascript"></script>
+<script type="text/javascript"></script>
+<script type="text/javascript"></script>
+<link type="text/css" rel="stylesheet">
+<script type="text/javascript"></script>
+<script type="text/javascript"></script>
+<script type="text/javascript"></script>
+<script type="text/javascript"></script>
+<link type="text/css" rel="stylesheet"/>
+<script type="text/javascript"></script>
+<script type="text/javascript"></script>
+<script type="text/javascript"></script>
+<link type="text/css" rel="stylesheet"/>
+<script type="text/javascript"></script>
+<link type="text/css" rel="stylesheet"/>
+<script type="text/javascript"></script>
+<link type="text/css" rel="stylesheet"/>
+<script type="text/javascript"></script>
+<link type="text/css" rel="stylesheet"/>
+<script type="text/javascript" src="/jsjis/ui/widgets/validity/validity.js"></script>
+<script type="text/javascript" src="/jsjis/ui/widgets/hanweb/validity/validity.js"></script>
+<link type="text/css" rel="stylesheet" href="/jsjis/ui/lib/easyui/themes/bootstrap/pagination.css"/>
+<script type="text/javascript" src="/jsjis/ui/lib/easyui/plugins/jquery.pagination.js"></script>
+<link type="text/css" rel="stylesheet" href="/jsjis/ui/widgets/hanweb/iconfont/css/iconfont.css"/>
+<link type="text/css" rel="stylesheet" href="/jsjis/ui/lib/easyui/themes/default/datagrid.css"/>
+<link type="text/css" rel="stylesheet" href="/jsjis/ui/widgets/hanweb/grid/css/grid.css"/>
+<script type="text/javascript" src="/jsjis/ui/lib/easyui/plugins/jquery.datagrid.js"></script>
+<script type="text/javascript" src="/jsjis/ui/widgets/hanweb/grid/grid.js"></script>
+<script type="text/javascript" src="/jsjis/ui/widgets/placeholder/jquery.placeholder.min.js"></script>
+<link type="text/css" rel="stylesheet" href="/jsjis/ui/widgets/checkpwd/css/checkpwd.css"/>
+<script type="text/javascript" src="/jsjis/ui/widgets/checkpwd/checkpwd.js"></script>
+<script type="text/javascript" src="/jsjis/ui/lib/security/jsencrypt.min.js"></script>
+<script type="text/javascript" src="/jsjis/ui/lib/security/rsa_util.js"></script>
+<link type="text/css" rel="stylesheet" href="/jsjis/ui/widgets/hanweb/calendar/css/calendar.css"/>
+<script type="text/javascript" src="/jsjis/ui/widgets/My97DatePicker/WdatePicker.js"></script>
+<link type="text/css" rel="stylesheet" href="/jsjis/ui/lib/easyui/themes/bootstrap/dialog.css"/>
+<script type="text/javascript" src="/jsjis/ui/lib/easyui/plugins/jquery.dialog.js"></script>
+>>>>>>> remotes/origin/huzihan
 
 <!DOCTYPE html>
 <html>
@@ -11,60 +55,69 @@
     <title>用户注册</title>
     <link type="text/css" href="https://www.jszwfw.gov.cn/jsjis/template/tpl3/css/hanweb.css" rel="stylesheet">
     <link type="text/css" href="https://www.jszwfw.gov.cn/jsjis/template/tpl3/css/js_yhzc_01.css" rel="stylesheet">
+<<<<<<< HEAD
     <link rel="stylesheet" type="text/css" href="https://www.jszwfw.gov.cn/jsjis/template/tpl3/css/yhzc_gr.css" />
     <link rel="stylesheet" type="text/css" href="https://www.jszwfw.gov.cn/jsjis/template/tpl3/css/yhzx_find.css" />
 
+=======
+    <link rel="stylesheet" type="text/css" href="https://www.jszwfw.gov.cn/jsjis/template/tpl3/css/yhzc_gr.css"/>
+    <link rel="stylesheet" type="text/css" href="https://www.jszwfw.gov.cn/jsjis/template/tpl3/css/yhzx_find.css"/>
+    <script type="text/javascript" src="../../ui/script/idcardValidity.js"></script>
+    <script type="text/javascript" src="../../ui/lib/easyui/maskUtil.js"></script>
+>>>>>>> remotes/origin/huzihan
 
-    <link rel="stylesheet" type="text/css" href="https://www.jszwfw.gov.cn/jsjis/template/tpl3/images/szfhead/images/zwfw.css">
+    <link rel="stylesheet" type="text/css"
+          href="https://www.jszwfw.gov.cn/jsjis/template/tpl3/images/szfhead/images/zwfw.css">
     <script>
 
         var levelNum;
-        function trim(str){
+
+        function trim(str) {
             return str.replace(/(^\s*)|(\s*$)/g, "");
         }//过滤左右空格
 
 
-        function match(){
+        function match() {
             password1 = trim($('#password1').val());
             password2 = trim($('#password2').val());
-            if (password1 == password2){
+            if (password1 == password2) {
                 return true;
             } else {
                 return false;
             }
         }
 
-        window.alert = function (msg,type,fu){
-            top.$.messager.alert(' ',msg,type,fu);
+        window.alert = function (msg, type, fu) {
+            top.$.messager.alert(' ', msg, type, fu);
         };
 
         $.validity.setup({
-            outputMode : "showErr"
+            outputMode: "showErr"
         }); //校验错误弹出
 
-        window.confirm = function(msg,okCall,cancelCall){
-            top.$.messager.confirm(' ',msg,function(flag){
-                if(flag){
-                    if(typeof(okCall) != 'undefined'){
+        window.confirm = function (msg, okCall, cancelCall) {
+            top.$.messager.confirm(' ', msg, function (flag) {
+                if (flag) {
+                    if (typeof (okCall) != 'undefined') {
                         okCall();
                     }
-                }else{
-                    if(typeof(cancelCall) != 'undefined'){
+                } else {
+                    if (typeof (cancelCall) != 'undefined') {
                         cancelCall();
                     }
                 }
             });
         };
 
-        $(function(){
+        $(function () {
 
             if (headjs != '') {
-                $("#top").css("display","none");
-                $("#bt-footer").css("display","none");
-                $(".bbg").css("margin-top","0px");
+                $("#top").css("display", "none");
+                $("#bt-footer").css("display", "none");
+                $(".bbg").css("margin-top", "0px");
             } else {
-                $("#headjs").css("display","none");
-                $("#footjs").css("display","none");
+                $("#headjs").css("display", "none");
+                $("#footjs").css("display", "none");
             }
             $("#realType").val('1');
             $("#one_list").hide();
@@ -77,7 +130,7 @@
             $("#userCard").show();
         })
 
-        $(function(){
+        $(function () {
 
             /* $("#p").mouseover(function(){
                 $('#loginId').require('请填写用户名')
@@ -86,31 +139,31 @@
             }) */
             var pwdlevel = 1;
             /* $("#loginId").focus(); */
-            $('#registerforms').validity(function(){
+            $('#registerforms').validity(function () {
                 /* $('#loginId').require('请填写用户名').minLength(4, "用户名不能少于4个字符").maxLength(30,'用户名长度不能超过30')
                 .match('username4', "用户名由字母和数字组成，必须以字母开头"); */
-                $('#password1').require('请填写密码').minLength(8,'密码不少于8位').maxLength(18, "密码最多18个字")
-                    .assert(function(){
-                        if(level == "weak"){
+                $('#password1').require('请填写密码').minLength(8, '密码不少于8位').maxLength(18, "密码最多18个字")
+                    .assert(function () {
+                        if (level == "weak") {
                             levelNum = 0;
-                        }else if(level == "medium"){
+                        } else if (level == "medium") {
                             levelNum = 1;
-                        }else if(level == "strong"){
+                        } else if (level == "strong") {
                             levelNum = 2;
                         }
-                        if(levelNum < pwdlevel){
+                        if (levelNum < pwdlevel) {
                             $('#verifyImg').click();
                             return false;
-                        }else{
+                        } else {
                             return true;
                         }
-                    },"密码强度低于系统要求");
-                $('#password2').require('请填写确认密码').assert(match(),'两次输入密码不一致，请正确填写');
+                    }, "密码强度低于系统要求");
+                $('#password2').require('请填写确认密码').assert(match(), '两次输入密码不一致，请正确填写');
                 $("#papersNumber").require("请填写证件号码");
                 $("#name").require("请填写用户姓名");
                 var papersType = $("#papersType").val();
-                if(papersType ==1 ) {
-                    $("#papersNumber").assert(IdCardValidate($('#papersNumber').val()),"对不起,您输入的身份证格式不正确");
+                if (papersType == 1) {
+                    $("#papersNumber").assert(IdCardValidate($('#papersNumber').val()), "对不起,您输入的身份证格式不正确");
                 }
                 $("#mobile").require("请填写手机号码");
                 $('#mobileRandCode').require('请填写短信验证码');
@@ -119,9 +172,9 @@
                 if(realType == 1){
                     $('#starttime').require('请填写居民身份证有效期');
                 } */
-            },{
-                beforeSubmit : function(validateResult) {
-                    if(validateResult){
+            }, {
+                beforeSubmit: function (validateResult) {
+                    if (validateResult) {
                         showMask();
                     }
                     /* var u_user = $('#loginId').val(); */
@@ -130,94 +183,97 @@
                     $('#enc_password').val(RSAencode(u_password1));
                     var endtime1 = $("#endtime1").val();
                     var endtime2 = $("#endtime2").val();
-                    if(!endtime1 && endtime2){
+                    if (!endtime1 && endtime2) {
                         $("#endtime").val(endtime2);
-                    }else if(endtime1 && !endtime2){
+                    } else if (endtime1 && !endtime2) {
                         $("#endtime").val(endtime1);
                     }
                 },
-                success:function(result){
+                success: function (result) {
                     MaskUtil.unmask();
                     var url = result.params.url;
                     var ticket = result.params.ticket;
-                    if(result.success){
-                        if(url == ''){
+                    if (result.success) {
+                        if (url == '') {
                             alert("实名认证失败！");
-                        }else{
-                            if(ticket != null || ticket != 'undefined'){
+                        } else {
+                            if (ticket != null || ticket != 'undefined') {
                                 top.location.href = url;
-                            }else{
+                            } else {
                                 top.location.href = "../quicklogin.do";
                             }
                         }
-                    }else{
-                        if(url != ''){
+                    } else {
+                        if (url != '') {
                             var msg = result.message;
                             var appMark = result.params.appMark;
                             var papersnumber = $("#no").val();
                             var name = $("#name").val();
                             //top.location.href = url;
-                            if(result.message!=undefined && result.message!=''){
-                                if(msg.indexOf("身份证号被占用") >= 0){
+                            if (result.message != undefined && result.message != '') {
+                                if (msg.indexOf("身份证号被占用") >= 0) {
                                     /* alert("该身份证号已经绑定其他账号,请前往身份证找回页面", "", function(){
                                         //top.location.href = '../../front/userMsgRetrieve/confirmPapersNumberMsg.do?appMark=jszwfw&papersnumber=' + RSAencode(papersnumber) + "&name=" + RSAencode(name);
                                         window.open('../../front/userMsgRetrieve/confirmPapersNumberMsg.do?appMark='+appMark+'&papersnumber=' + RSAencode(papersnumber) + "&name=" + RSAencode(name),'newwindow')
                                        }); */
-                                    openDialog('./papersRegister_show.do', 562, 487, {
-                                    });
+                                    openDialog('./papersRegister_show.do', 562, 487, {});
                                 } else {
                                     alert(result.message);
                                 }
-                            }else{
+                            } else {
                                 alert(result.message);
                             }
-                        }else{
+                        } else {
                             alert(result.message);
                         }
                     }
                 }
             });
         });
-        function showMask(){
+
+        function showMask() {
             MaskUtil.mask();
         }
-        function hideMask(){
+
+        function hideMask() {
             MaskUtil.unmask();
         }
+
         //发送手机短信验证码
         function sendCode() {
             var mobile = $("#mobile").val();
             var papersNumber = $("#papersNumber").val();
             var randCode = $("#randCode").val();
-            if(mobile == "") {
+            if (mobile == "") {
                 alert("请输入手机号码")
-            }else if(!(/^1[3456789]\d{9}$/.test(mobile))) {
+            } else if (!(/^1[3456789]\d{9}$/.test(mobile))) {
                 alert("对不起，您输入的手机号码错误");
-            }else if(randCode == "") {
+            } else if (randCode == "") {
                 alert("请输入图片验证码");
-            }else if(papersNumber == "") {
+            } else if (papersNumber == "") {
                 alert("请填写证件号码")
-            }{
+            }
+            {
                 $.ajax({
-                    type:"post",
-                    url:"sendmobilerand.do",
-                    data:"mobile="+RSAencode(mobile)+"&userType=1"+"&papersNumber="+RSAencode(papersNumber) +"&randCode="+randCode,
-                    success:function(result){
-                        if(result.success) {
+                    type: "post",
+                    url: "sendmobilerand.do",
+                    data: "mobile=" + RSAencode(mobile) + "&userType=1" + "&papersNumber=" + RSAencode(papersNumber) + "&randCode=" + randCode,
+                    success: function (result) {
+                        if (result.success) {
                             alert("短信发送成功");
                             var num = 120;
-                            timer = setInterval(function(){
+                            timer = setInterval(function () {
                                 $("#sendMobileCodeTime").show();
                                 $("#sendMobileCode").hide();
-                                $("#sendMobileCodeTime").html(num--+"s后可重新发送");
+                                $("#sendMobileCodeTime").html(num-- + "s后可重新发送");
                                 num = num--;
                             }, 1000);
-                            setTimeout(function(){
+                            setTimeout(function () {
                                 clearInterval(timer);
                                 $("#sendMobileCodeTime").hide();
                                 $("#sendMobileCode").show();
-                            }, 121*1000);
-                        }else {
+                            }, 121 * 1000);
+                        } else {
                             var msg = result.message;
                             if (msg.indexOf("图片验证码错误") >= 0) {
                                 alert(msg);
@@ -225,17 +281,15 @@
                             if (msg.indexOf("发送短信太频繁，请两分钟之后再发") >= 0) {
                                 alert(msg);
                             }
-                            if(msg.indexOf("直接登录或者忘记密码") >= 0){
-                                openDialog('./mobileRegister_show.do?type=1', 562, 487, {
-                                });
+                            if (msg.indexOf("直接登录或者忘记密码") >= 0) {
+                                openDialog('./mobileRegister_show.do?type=1', 562, 487, {});
                                 //msg = "您的手机号码已被注册，请直接<a target=\"_blank\" href=\"../../front/login.do?appMark=jszwfw\" style=\"cursor: pointer;color:red;\">“登录”</a>，如需找回手机号，请点击<a target=\"_blank\" href=\"../../front/userMsgRetrieve/confirmMobileMsg.do?appMark=jszwfw&type=1&mobile=" + RSAencode(mobile) + "\" style=\"cursor: pointer;color:red;\">“手机号找回”</a>功能进行找回";
                             }
-                            if(msg.indexOf("继续注册") >= 0){
-                                openDialog('./mobileRegister_show.do?type=2', 562, 487, {
-                                });
+                            if (msg.indexOf("继续注册") >= 0) {
+                                openDialog('./mobileRegister_show.do?type=2', 562, 487, {});
                                 //msg = "您的手机号码已被注册，请直接<a target=\"_blank\" href=\"../../front/login.do?appMark=jszwfw\" style=\"cursor: pointer;color:red;\">“登录”</a>，如需找回手机号，请点击<a target=\"_blank\" href=\"../../front/userMsgRetrieve/confirmMobileMsg.do?appMark=jszwfw&type=1&mobile=" + RSAencode(mobile) + "\" style=\"cursor: pointer;color:red;\">“手机号找回”</a>功能进行找回";
                             }
-                            if(msg.indexOf("该手机号对应的用户存在，但是未激活") >= 0){
+                            if (msg.indexOf("该手机号对应的用户存在，但是未激活") >= 0) {
                                 msg = "您手机号已注册但未激活，请点击<a target=\"_blank\" href=\"../../front/userMsgActivate/useractivestep1.do?appMark=jszwfw&type=1&mobile=" + RSAencode(mobile) + "\" style=\"cursor: pointer;color:red;\">“激活”</a>进行激活，激活成功后可通过手机号+短信验证码或者登录名+密码进行登录";
                             }
                             $('#verifyImg').click();
@@ -244,38 +298,40 @@
                 });
             }
         }
-        var setEndtime = setInterval("checkStartTime();",500); //单位毫秒
 
-        function checkStartTime(){
+        var setEndtime = setInterval("checkStartTime();", 500); //单位毫秒
+
+        function checkStartTime() {
             var starttime = $("#starttime").val();
             var endtime2 = $("input[name=endtime2]:checked").val();
-            if(starttime != ""){
-                if(endtime2 == "长期"){
+            if (starttime != "") {
+                if (endtime2 == "长期") {
                     $("#endtime1").val("2099-12-31");
                 } else {
-                    var year = Number(starttime.substr(0,4));
-                    if(endtime2 == "五年"){
+                    var year = Number(starttime.substr(0, 4));
+                    if (endtime2 == "五年") {
                         year = year + 5;
                         year = year + "";
-                        year = year + starttime.substr(4,starttime.getlengt);
+                        year = year + starttime.substr(4, starttime.getlengt);
                         $("#endtime1").val(year);
-                    } else if(endtime2 == "十年"){
+                    } else if (endtime2 == "十年") {
                         year = year + 10;
                         year = year + "";
-                        year = year + starttime.substr(4,starttime.getlength);
+                        year = year + starttime.substr(4, starttime.getlength);
                         $("#endtime1").val(year);
-                    } else if(endtime2 == "二十年"){
+                    } else if (endtime2 == "二十年") {
                         year = year + 20;
                         year = year + "";
-                        year = year + starttime.substr(4,starttime.getlength);
+                        year = year + starttime.substr(4, starttime.getlength);
                         $("#endtime1").val(year);
                     }
 
                 }
             }
         }
-        function checkEndTime(){
-            if(chooseRedio != 1){
+
+        function checkEndTime() {
+            if (chooseRedio != 1) {
                 var endtime1 = $("#endtime1").val();
                 var endtime2 = $("#endtime2:checked").val();
                 var timeInfo = $("#time_info");
@@ -292,8 +348,10 @@
             }
             chooseRedio = 0;
         }
+
         var chooseRedio = 0;
-        function chooseEndtime3(){
+
+        function chooseEndtime3() {
             $("#endtime1").val("");
             var endtime2 = $("input[name=endtime2]:checked").val();
             $('#endtime1').hide();
@@ -301,15 +359,16 @@
             chooseRedio = 1;
         }
 
-        function chooseEndtime(){
+        function chooseEndtime() {
             $("input[name=endtime2]:checked").removeAttr("checked");
             $("#endtime2").val("");
         }
-        function changeUrl(){
+
+        function changeUrl() {
             var cztIndexUrl = "";
-            if(cztIndexUrl != ""){
+            if (cztIndexUrl != "") {
                 window.location.href = cztIndexUrl;
-            }else{
+            } else {
                 window.location.href = '/';
             }
         }
@@ -321,6 +380,7 @@
             /* background: url(../imgs/calendar_btn.png) no-repeat right; */
             background-color: #FCFCFC;
         }
+
         #sendMobileCodeTime {
             display: block;
             width: 180px;
@@ -335,6 +395,7 @@
             color: #fff;
             text-align: center;
         }
+
         .c2 {
             float: left;
             width: 300px;
@@ -342,6 +403,7 @@
             position: relative;
             background: #f2f2f2;
         }
+
         .code_deg {
             float: left;
             width: 100px;
@@ -352,11 +414,13 @@
             color: #fff;
             text-align: center;
         }
+
         .zc_01_32 {
             float: left;
             width: 670px;
             height: 50px;
         }
+
         .zc_01_31 {
             float: left;
             height: 45px;
@@ -364,9 +428,11 @@
             margin-bottom: 20px;
             position: relative;
         }
+
         .clearfloat {
             zoom: 1;
         }
+
         .zhxx {
             width: 700px;
             height: 50px;
@@ -376,6 +442,7 @@
             padding-left: 10px;
             border-bottom: 2px solid #ecf1f8;
         }
+
         .sele {
             float: left;
             width: 435px;
@@ -388,12 +455,14 @@
             color: #999;
             font-size: 15px;
         }
+
         span.tishi {
             text-align: right;
             display: inline-block;
             width: 220px;
             font-size: 16px;
         }
+
         .hRadio {
             padding-left: 22px;
             display: inline-block;
@@ -403,9 +472,11 @@
             cursor: pointer;
             vertical-align: middle;
         }
+
         .hRadio_Checked {
             background-position: left bottom;
         }
+
         .explain {
             width: 435px;
             height: 55px;
@@ -415,6 +486,7 @@
             margin-top: 85px;
             margin-left: 180px;
         }
+
         .explain p {
             font-size: 15px;
             color: #333333;
@@ -422,6 +494,7 @@
             width: 410px;
             text-align: center;
         }
+
         #wj_nationality {
             padding-left: 20px;
             width: 435px;
@@ -434,9 +507,11 @@
             padding: 8px 0;
             margin-left: 7px;
         }
+
         .datagrid-mask-msg {
             height: 36px;
         }
+
         .biaoti {
             width: 300px;
             height: 100%;
@@ -445,6 +520,7 @@
             line-height: 100px;
             margin-left: 305px;
         }
+
         .bgimg {
 
             height: 200px;
@@ -463,46 +539,108 @@
     </div>
     <div class="zc_01 clearfloat" style="margin-top: -70px;">
         <!-- <div class="zhxx">账号信息</div> -->
+<<<<<<< HEAD
         <form action="/register" class="zc_01_03 clearfloat"  method="post" style="margin-bottom: 100px; margin: auto">
+=======
+        <form action="/login" class="zc_01_03 clearfloat" method="post" style="margin-bottom: 100px; margin: auto">
+>>>>>>> remotes/origin/huzihan
             <input id="appmark" name="appmark" type="hidden" class="db_input" value="${appmark}">
             <input id="enc_name" type="hidden" name="userName">
             <input id="enc_password" type="hidden" name="password">
             <input name="userType" type="hidden" value="1">
             <input name="csrfCode" type="hidden" value="">
             <input type="hidden" id="qid" value="">
-            <input id="endtime" type="hidden" name="endTime" />
-            <input id="realType" type="hidden" name="realType" value="1" />
+            <input id="endtime" type="hidden" name="endTime"/>
+            <input id="realType" type="hidden" name="realType" value="1"/>
             <input id="nationality" type="hidden" name="nationality" value=""/>
             <input id="papertype" type="hidden" name="papertype" value=""/>
-
 
 
             <!-- <div class="zhxx" style="margin-bottom: 30px;"><span style="margin-left: 252px;">自然人实名注册</span></div> -->
 
 
+<<<<<<< HEAD
             <div id="userName" class="zc_01_31 clearfloat" style="margin-top: 10px;"> <span>姓名：<font color="#fe4242">*</font></span>
                 <input type="text" value="" id="name" name="username" placeholder="输入用户名" maxlength="30">
+=======
+            <div id="userName" class="zc_01_31 clearfloat" style="margin-top: 10px;"><span>姓名：<font
+                            color="#fe4242">*</font></span>
+                <input type="text" value="" id="name" name="names" placeholder="输入姓名" maxlength="30">
+            </div>
+            <div id="userCard" class="zc_01_31 clearfloat"><span>证件号码：<font color="#fe4242">*</font></span>
+                <input type="text" value="" id="papersNumber" name="papersNumber" placeholder="请输入对应的证件号码"
+                       maxlength="30">
+            </div>
+            <div id="sfzyxq" style="display: none;">
+                <p>
+                    <span class="tishi" style="margin-left: -50px;">居民身份证有效期起始时间：<!-- <font color="#fe4242">*</font> --><span
+                                class="bitian"> </span></span>
+                    <input id="starttime" autocomplete="off" name="startTime" type="text" class="jcalendar input-text"
+                           placeholder="请选择身份证有效期起始时间"
+                           onclick="WdatePicker({startDate:'2012-06-06',dateFmt:'yyyy-MM-dd',maxDate:'#F{$dp.$D(\'endtime1\')}'});checkStartTime();"
+                           onblur="checkStartTime();"
+                           style="width: 435px; height: 45px; margin-left: 5px;"/>
+                    <span class="tishi" style="margin-left: -50px;">居民身份证有效期截止时间：<!-- <font color="#fe4242">*</font> --><span
+                                class="bitian"> </span></span>
+                    <input id="endtime1" autocomplete="off" type="text" class="jcalendar input-text"
+                           placeholder="请选择身份证有效期截止时间"
+                           onclick="WdatePicker({startDate:'%y-%M-01',dateFmt:'yyyy-MM-dd',minDate:'#F{$dp.$D(\'starttime\')}'});"
+                           style="width: 435px; height: 45px; margin-left: 5px; margin-top: 20px;"/>
+                <div style="margin-top: 10px;">
+                    <input type="radio" id="fiveyear" name="endtime2" value="五年"
+                           style="width:13px;height:20px;vertical-align: middle;margin-left: 355px;"/>
+                    <span>五年</span>
+                    <input type="radio" checked="checked" id="tenyear" name="endtime2" value="十年"
+                           style="margin-left: 10px;width:13px;height:20px;vertical-align: middle;"/>
+                    <span>十年</span>
+                    <input type="radio" id="twentyear" name="endtime2" value="二十年"
+                           style="margin-left: 10px;width:13px;height:20px;vertical-align: middle;"/>
+                    <span>二十年</span>
+                    <input type="radio" id="longyear" name="endtime2" value="长期"
+                           style="margin-left: 10px;width:13px;height:20px;vertical-align: middle;"/>
+                    <span>长期</span>
+                </div>
+                </p>
+>>>>>>> remotes/origin/huzihan
             </div>
 
 
             <div class="height25"></div>
             <p style=" margin-bottom: 0; margin-top: -20px; height: 40px;" id="time_info">
-                <span ></span><label class="error"></label>
+                <span></span><label class="error"></label>
             </p>
-
-
-
 
 
             <!-- <div class="zc_01_31 clearfloat"> <span>用户名：<font color="#fe4242">*</font></span>
               <input id="loginId" type="text" placeholder="长度为4-30个字符，支持字母和数字组成，字母开头" maxlength="30">
             </div> -->
+<<<<<<< HEAD
             <div class="zc_01_31 clearfloat"> <span>密码：<font color="#fe4242">*</font></span>
                 <input type="password" name="password" value="" class="" id="password" maxlength="18" onkeyup="javascript:EvalPwd(this.value);" onkeydown="if(event.keyCode==32) {event.returnValue = false;return false;}" onpaste="return false" placeholder="长度为8-18个字符，强度要求中">
+=======
+            <div class="zc_01_31 clearfloat"><span>密码：<font color="#fe4242">*</font></span>
+                <input type="password" value="" class="password1" id="password1" maxlength="18"
+                       onkeyup="javascript:EvalPwd(this.value);"
+                       onkeydown="if(event.keyCode==32) {event.returnValue = false;return false;}"
+                       onpaste="return false" placeholder="长度为8-18个字符，强度要求中">
+            </div>
+            <div class="zc_01_31 zc_01_32 clearfloat"><span></span>
+                <div class="c2" id="pwdpower" style="margin-top:0px;">
+                    <div id="pweak" class="code_deg">弱</div>
+                    <div id="pmedium" class="code_deg">中</div>
+                    <div id="pstrong" class="code_deg" style="border: none;">强</div>
+                </div>
+>>>>>>> remotes/origin/huzihan
             </div>
 
             <div></div>
+<<<<<<< HEAD
 
+=======
+            <div class="zc_01_31 clearfloat"><span>确认密码：<font color="#fe4242">*</font></span>
+                <input type="password" value="" class="password2" id="password2" maxlength="18" placeholder="两次密码必须一致">
+            </div>
+>>>>>>> remotes/origin/huzihan
             <div class="zc_01_31 zc_01_33 clearfloat" style="left:180px;width:300px">
                 <input type="submit" value="立即注册" class="next">
             </div>
