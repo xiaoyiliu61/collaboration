@@ -10,15 +10,11 @@ type RegisterController struct {
 	beego.Controller
 }
 
-<<<<<<< HEAD
-func (r *RegisterController) Post() {
-=======
 /**
  * post方法处理用户注册
  */
 func (r *RegisterController) Post() {
 
->>>>>>> master
 	//1、解析用户端提交的请求数据
 	var user models.User
 	err := r.ParseForm(&user)
@@ -37,9 +33,5 @@ func (r *RegisterController) Post() {
 
 
 	fmt.Println("跳转到login页面")
-<<<<<<< HEAD
-	r.TplName = "login.html"   //
-=======
 	r.TplName = "login.html"   // 文件上传界面{{.Phone}
->>>>>>> master
 }

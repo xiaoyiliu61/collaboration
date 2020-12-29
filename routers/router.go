@@ -6,8 +6,18 @@ import (
 )
 
 func init() {
-    beego.Router("/", &controllers.MainController{})
-    beego.Router("/login", &controllers.RegisterController{})
-    beego.Router("/directory", &controllers.DirectoryController{})
-    beego.Router("/index", &controllers.IndexController{})
+
+    //用户登录
+    beego.Router("/login", &controllers.MainController{})
+    //用户注册
+	beego.Router("/register", &controllers.RegisterController{})
+    //目录
+	beego.Router("/directory", &controllers.DirectoryController{})
+    //主页面
+	beego.Router("/index", &controllers.IndexController{})
+
+
+
+
+
 }

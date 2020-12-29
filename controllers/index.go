@@ -6,6 +6,8 @@ type IndexController struct {
 	beego.Controller
 }
 
-func (I *IndexController) Get() {
+
+func (I *IndexController)Post() {
 	I.TplName="index.html"
+
 }

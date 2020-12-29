@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hi</title>
+</head>
+<body>
+<p>当前的难度值是
+    <button onclick="start()">开始</button>
+<p id="div1">  </p>
+</p>
+</body>
+
+<script type="text/javascript">
+    var t1 ;
+    function start(){
+        var div1 = document.getElementById("div1");
+        div1.innerHTML = {{.难度}};
+    }
+
+
+
+</script>
+</html>

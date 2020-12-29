@@ -7,14 +7,21 @@ import (
 
 type User struct {
 	Id       int    `form:"id"`
-	Username     string `form:"Username"`
+	Username     string `form:"username"`
 	Password string `form:"password"`
 
 
 }
+<<<<<<< HEAD
 /**
 将用户信息保存到数据库中
 */
+=======
+
+/**
+将用户信息保存到数据库中
+ */
+>>>>>>> master
 func (u User) AddUser() (int64, error) {
 	//脱敏
 	u.Password = utils.MD5HashString(u.Password) //把脱敏的密码的md5值重新赋值为密码进行存储
@@ -48,4 +55,8 @@ func (u User) QueryUser() (*User, error) {
 		return nil, err
 	}
 	return &u, nil
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> master
