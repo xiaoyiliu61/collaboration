@@ -1,6 +1,7 @@
 package main
 
 import (
+	"collaboration/db_mysql"
 	_ "collaboration/routers"
 	"fmt"
 	"github.com/astaxie/beego"
@@ -17,6 +18,8 @@ func main() {
 
 
 	fmt.Println("hello luxiaoyan")
+
+	db_mysql.Connect()
 
 	beego.Run()
 

@@ -6,13 +6,15 @@ import (
 )
 
 func init() {
+	//路由
+	beego.Router("/", &controllers.MainController{})
 	//用户注册
-    beego.Router("/", &controllers.MainController{})
+    beego.Router("/register", &controllers.RegisterController{})
     //用户登录
-    beego.Router("/login", &controllers.RegisterController{})
-    //
+    beego.Router("/login", &controllers.LoginController{})
+    //bitcoin目录
     beego.Router("/directory", &controllers.DirectoryController{})
-    //
+    //区块数据信息
     beego.Router("/index", &controllers.IndexController{})
 
 }

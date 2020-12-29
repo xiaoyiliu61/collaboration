@@ -7,5 +7,5 @@ type DirectoryController struct {
 }
 
 func (D *DirectoryController) Post() {
-	D.TplName="bitDirectory.html"
+	D.TplName="index.html"
 }
