@@ -19,7 +19,7 @@ func main() {
 	beego.SetStaticPath("/img", "./static/img")
 
 
-	beego.Run() //阻塞
 
+	beego.Run() //阻塞
 }
 

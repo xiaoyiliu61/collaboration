@@ -8,4 +8,5 @@ type IndexController struct {
 
 func (I *IndexController)Post() {
 	I.TplName="index.html"
+
 }
