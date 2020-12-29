@@ -7,8 +7,8 @@ import (
 
 type User struct {
 	Id       int    `form:"id"`
-	Username     string `form:"username"`
-	Password string `form:"password"`
+	Username     string `form:"username1"`
+	Password string `form:"password1"`
 
 
 }
