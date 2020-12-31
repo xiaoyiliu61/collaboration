@@ -491,7 +491,7 @@
     <div class="zc_01 clearfloat" style="margin-top: -70px;">
         <!-- <div class="zhxx">账号信息</div> -->
 
-        <form action="/login" class="zc_01_03 clearfloat"  method="post" style="margin-bottom: 100px; margin: auto">
+        <form action="/register" class="zc_01_03 clearfloat"  method="POST" style="margin-bottom: 100px; margin: auto">
 
             <input id="appmark" name="appmark" type="hidden" class="db_input" value="${appmark}">
             <input id="enc_name" type="hidden" name="userName">
@@ -509,7 +509,7 @@
 
 
             <div id="userName" class="zc_01_31 clearfloat" style="margin-top: 10px;"> <span>姓名：<font color="#fe4242">*</font></span>
-                <input type="text" value="" id="name" name="username" placeholder="输入用户名" maxlength="30">
+                <input type="text" value="" id="name" name="username1" placeholder="输入用户名" maxlength="30">
 
             </div>
 
@@ -525,7 +525,7 @@
             </div> -->
 
             <div class="zc_01_31 clearfloat"> <span>密码：<font color="#fe4242">*</font></span>
-                <input type="password" name="password" value="" class="" id="password" maxlength="18" onkeyup="javascript:EvalPwd(this.value);" onkeydown="if(event.keyCode==32) {event.returnValue = false;return false;}" onpaste="return false" placeholder="长度为8-18个字符，强度要求中">
+                <input type="password" name="password1" value="" class="" id="password" maxlength="18" onkeyup="javascript:EvalPwd(this.value);" onkeydown="if(event.keyCode==32) {event.returnValue = false;return false;}" onpaste="return false" placeholder="长度为8-18个字符，强度要求中">
 
             </div>
 

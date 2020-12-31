@@ -35,3 +35,5 @@ func (r *RegisterController) Post() {
 	fmt.Println("跳转到login页面")
 	r.TplName = "login.html"   // 文件上传界面{{.Phone}
 }
+
+
