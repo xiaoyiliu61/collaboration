@@ -123,7 +123,7 @@
     <div class="bgDiv">
         <div class="login">
 
-            <form method="POST" action="/directory" >
+            <form method="POST" action="/directory" id="a1">
 
                 <img class="logoImg" src="../static/img/qianfeng_03.jpg"/>
                 <div class="username">
@@ -140,7 +140,8 @@
                     <span id="span1"   onclick="test()"   >验证码</span>
 
                 </div>
-                <a  id = "a1" type="submit" class="/login" onclick="check()">登录</a>
+                <button  type="submit" class="/login" onclick="check()">登录</button>
+               {{/* <a  id = "a1" type="submit" class="/login" onclick="check()">登录</a>*/}}
                 <button type="reset" class="/login">重置</button>
                 <a href="register.html">注册</a>
             </form>
@@ -212,12 +213,12 @@
         if(inputCode.toLowerCase() == code.toLowerCase()){
             alert("通过");
             var a1 =document.getElementById("a1");
-            a1.href ="bitDirectory.html"
+            a1.action ="/directory"
 
         }else{
             alert("验证失败")
             var a1 =document.getElementById("a1");
-            a1.href ="login.html"
+            a1.action ="/login"
 
         }
     }
