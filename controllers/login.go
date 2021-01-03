@@ -33,8 +33,8 @@ func (l *LoginController) Post() {
 		l.Ctx.WriteString("抱歉，用户登录失败，请重试")
 		return
 	}
-	l.Data["Username"] = u.Username
+	l.Data["Phone"] = u.Phone
 	fmt.Println("跳转到bitDirectory页面")
-	l.TplName = "bitDirectory.html"   // 文件上传界面{{.Phone}
+	l.TplName = "bitDirectory.html"
 }
 

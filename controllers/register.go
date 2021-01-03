@@ -10,9 +10,7 @@ type RegisterController struct {
 	beego.Controller
 }
 
-/**
- * post方法处理用户注册
- */
+
 func (r *RegisterController) Post() {
 
 	//1、解析用户端提交的请求数据
@@ -25,13 +23,19 @@ func (r *RegisterController) Post() {
 
 	//2、将解析到的数据保存到数据库中
 	_, err = user.AddUser()
-	if err != nil {
+	if err != nil {fmt.Println(err.Error())
 		r.Ctx.WriteString("抱歉，用户注册失败，请重试!")
-		fmt.Println(err.Error())
+
 		return
 	}
 
 
 	fmt.Println("跳转到login页面")
+<<<<<<< HEAD
 	r.TplName = "login.html"
+=======
+
+	r.TplName = "login.html"   //
+
+>>>>>>> liuyi
 }

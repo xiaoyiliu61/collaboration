@@ -11,11 +11,16 @@ func init() {
     beego.Router("/login", &controllers.MainController{})
     //用户注册
 	beego.Router("/register", &controllers.RegisterController{})
+
+	beego.Router("/login_sms.html",&controllers.LoginSmsController{})
+    //发送验证码
+    beego.Router("/sendsms", &controllers.SentSmsController{})
+    //手机号验证登录
+    beego.Router("/login_sms", &controllers.LoginSmsController{})
     //目录
 	beego.Router("/directory", &controllers.DirectoryController{})
     //主页面
 	beego.Router("/index", &controllers.IndexController{})
-
 
 
 
