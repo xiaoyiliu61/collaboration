@@ -48,7 +48,7 @@
         .logoImg {
             width: 141px;
             height: 100px;
-            margin-top: 32px;
+            margin-top: 42px;
             margin-left: 140px;
             margin-bottom: 8px;
         }
@@ -59,7 +59,7 @@
             width: 366px;
             height: 60px;
             border-bottom: 1px solid #efefef;
-            margin: 0 28px;
+            margin: 0 20px;
             /*line-height:60px;*/
         }
 
@@ -76,7 +76,7 @@
         .pwdInp {
             width: 320px;
             height: 25px;
-            margin-top: 18px;
+            margin-top: 10px;
             border: none;
             outline: none;
             margin-left: 20px;
@@ -103,7 +103,6 @@
             font-size: 16px;
             margin-left: 30px;
         }
-
     </style>
 </head>
 
@@ -113,23 +112,29 @@
 
     <div class="bgDiv">
         <div class="login">
-            <form method="POST" action="/directory">
+            <form method="POST" action="/login_sms">
 
-                <img class="logoImg" src="../static/img/qianfeng_03.jpg"/>
                 <div class="username">
-                    <img class="userImg" src="../static/img/qianfeng_07.png"/>
-                    <input class="userInp" type="text" placeholder="请输入用户名"/>
+                    <input name="biz_id" value="{{.BizId}}" hidden="hidden/">
+                    <div class="logoImg" src="../static/img/qianfeng_03.jpg"><input type="text" name="phone"
+                                                                                    value="{{.Phone}}" placeholder="请输入手机号码"
+                                                                                    draggable="false"
+                                                                                    autocomplete="on"><span
+                                class="error-text"></span></div>
                 </div>
                 <div class="pwd">
-                    <img class="pwdImg" src="../static/img/qianfeng_10.png"/>
-                    <input class="pwdInp" type="password" placeholder="请输入密码"/>
-                </div>
+                    <div class="logoImg" src="../static/img/qianfeng_10.png"/><input type="text" name="code" value=""
+                                                                                     placeholder="请输入验证码"
+                                                                                     draggable="false"
+                                                                                     autocomplete="on"><span
+                            class="error-text"></span></div>
+                <button type="submit" class="login-code">发送验证码</button>
 
-                    <p style="text-align: center"><a href="login_sms.html">手机号登录</a></p>
-                <div style="text-align: center">
+                <div></div>
                 <button type="submit" class="/login">登录</button>
                 <button type="reset" class="/login">重置</button>
-                <a href="register.html">注册</a> </div>
+
+                <a href="register.html">注册</a>
             </form>
         </div>
     </div>

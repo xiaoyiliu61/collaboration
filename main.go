@@ -13,6 +13,7 @@ func main() {
 
 	//设置静态资源文件映射
 	beego.SetStaticPath("/register.html", "./views/register.html")
+	beego.SetStaticPath("/login1.html", "./views/login1.html")
 
 	beego.SetStaticPath("/js", "./static/js")
 	beego.SetStaticPath("/css", "./static/css")
