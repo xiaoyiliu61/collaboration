@@ -51,6 +51,7 @@ func (u User) QueryUser() (*User, error) {
 	}
 	return &u, nil
 
+
 }
 
 
@@ -63,5 +64,7 @@ func (u User) QueryUserByPhone() (*User, error) {
 	}
 	return &user, nil
 }
+
+
 
 

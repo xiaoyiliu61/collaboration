@@ -11,3 +11,8 @@ type MainController struct {
 func (c *MainController) Get() {
 	c.TplName = "login.html"
 }
+
+func (c *MainController) Post() {
+	c.TplName = "login.html"
+
+}

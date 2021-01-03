@@ -4800,10 +4800,7 @@
                             <div class="s0dncj-0 cxfarA">
                                 <div class="s0dncj-2 hJfXDu">
                                     <div class="s0dncj-3 fukIDP">
-                                        <svg viewBox="0 0 512 512" class="sc-1pmbxjh-0 coriBa s0dncj-5 gTEwBp"
-                                             height="1.5rem" selectable="0" width="1.5rem">
-                                            <path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
-                                        </svg>
+
                                         <div class="sc-1c3roxu-0 kRLvqx s0dncj-4 fJgjCk" width="100%"><input type="text"
                                                                                                              placeholder="Search your transaction, an address or a block"
                                                                                                              value=""
@@ -4831,12 +4828,9 @@
                                         <div class="sc-9lx8x-1 iLHflj">
                                             <div class="sc-9lx8x-2 AkUnx"><span
                                                         class="sc-1ryi78w-0 hOxTmb sc-16b9dsl-1 ZwupP sc-1n72lkw-0 ebXUGH"
-                                                        opacity="1">USD</span></div>
+                                                        opacity="1">进入命令界面</span></div>
                                             <div class="sc-9lx8x-3 fXSthH">
-                                                <svg viewBox="0 0 320 512" height="16px" selectable="1" width="16px"
-                                                     class="sc-1pmbxjh-0 ezkaTJ">
-                                                    <path d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"></path>
-                                                </svg>
+
                                             </div>
                                         </div>
                                         <div class="sc-1cqdrwy-0 fRxJRp sc-9lx8x-4 fyoOgP" height="auto" width="100%">
@@ -4933,10 +4927,7 @@
                     <div class="sc-1rh7kad-1 irEbjC"><span
                                 class="sc-1ryi78w-0 latxTl sc-16b9dsl-1 ZwupP u3ufsr-0 eQTRKC" opacity="1">Blocks</span>
                         <div>
-                            <svg viewBox="0 0 512 512" class="sc-1pmbxjh-0 coriBa sc-1betipd-6 boXoJy" height="16px"
-                                 selectable="0" width="16px">
-                                <path d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"></path>
-                            </svg>
+
                         </div>
                     </div>
                 </div>
@@ -5007,31 +4998,26 @@
 
                     </div>*/}}
                     <div {{/*id="showcontent"*/}} class="sc-1g6z4xm-0 hXyplo"  >
-                        <table {{/*class="movies"*/}}  class="sc-6nt7oh-0 PtIAf">
+                        <table {{/*class="movies"*/}}  >
                             <tr>
                                 <td class="table_header">高度</td>
                                 <td class="table_header">hash值</td>
-                                <td class="table_header">开采时间</td>
-                                <td class="table_header">矿工</td>
-                                <td class="table_header">区块大小</td>
+
+                                <td class="table_header"></td>
 
                             </tr>
-                            {{range .AllLols}}
+                           {{/* {{range .AllLols}}*/}}
                                 <tr>
+                                    <td class="table_body">{{.d}}</td>
+                                    <td class="table_body"><input type="text" id="num"  name="shurukuang"></td>
 
-                                    <td class="table_body">{{.HeroId}}</td>
-                                    <td class="table_body">{{.Name}}</td>
-                                    <td class="table_body">{{.Alias}}</td>
-                                    <td class="table_body">{{.Title}}</td>
-                                    <td class="table_body">{{.Attack}}</td>
-
-
+                                    <td class="table_body"><a methods="POST" href="/index">详情</a></td>
                                 </tr>
-                            {{end}}
+                            {{/*{{end}}*/}}
                         </table>
                     </div>
 
-                    <div class="yi4g27-0 lhGqdm"><a selected="" href="/btc/blocks?page=1"
+                   {{/* <div class="yi4g27-0 lhGqdm"><a selected="" href="/btc/blocks?page=1"
                                                     class="hyz9b3-0 eyACIZ o0hu7t-0 krCkyA">1</a><a
                                 href="/btc/blocks?page=2" class="hyz9b3-0 iBJyXo o0hu7t-0 gXFlXe">2</a><a
                                 href="/btc/blocks?page=3" class="hyz9b3-0 iBJyXo o0hu7t-0 gXFlXe">3</a><a
@@ -5044,7 +5030,7 @@
                                 <path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"></path>
                             </svg>
                         </a></div>
-                </div>
+                </div>*/}}
             </div>
         </div>
     </div>

@@ -12,7 +12,6 @@ func init() {
     //用户注册
 	beego.Router("/register", &controllers.RegisterController{})
 
-	beego.Router("/login_sms.html",&controllers.LoginSmsController{})
     //发送验证码
     beego.Router("/sendsms", &controllers.SentSmsController{})
     //手机号验证登录
@@ -21,8 +20,6 @@ func init() {
 	beego.Router("/directory", &controllers.DirectoryController{})
     //主页面
 	beego.Router("/index", &controllers.IndexController{})
-
-
 
 
 }
