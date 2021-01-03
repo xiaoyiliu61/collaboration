@@ -3,7 +3,6 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 
 
-<!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -492,7 +491,9 @@
         <!-- <div class="zhxx">账号信息</div> -->
 
 
-        <form action="/login" class="zc_01_03 clearfloat" method="get" style="margin-bottom: 100px; margin: auto">
+
+        <form action="/register" class="zc_01_03 clearfloat" method="post" style="margin-bottom: 100px; margin: auto">
+
 
             <input id="appmark" name="appmark" type="hidden" class="db_input" value="${appmark}">
             <input id="enc_name" type="hidden" name="userName">
@@ -508,9 +509,25 @@
 
             <!-- <div class="zhxx" style="margin-bottom: 30px;"><span style="margin-left: 252px;">自然人实名注册</span></div> -->
 
+<<<<<<< HEAD
             <div id="userName" class="zc_01_31 clearfloat" style="margin-top: 10px;"><span>账号：<font
                             color="#fe4242">*</font></span>
                 <input type="text" value="" id="name" name="username" placeholder="输入用户账号" maxlength="30">
+=======
+            <div class="zc_01_31 clearfloat" style="margin-top: 10px;"> <span>手机号：<font color="#fe4242">*</font></span>
+
+                <input type="text" value="" id="phone" name="phone" placeholder="输入手机号" maxlength="30">
+
+
+            </div>
+
+            <div id="userName" class="zc_01_31 clearfloat" style="margin-top: 10px;"> <span>姓名：<font color="#fe4242">*</font></span>
+
+
+                <input type="text" value="" id="name" name="username" placeholder="输入用户名" maxlength="30">
+>>>>>>> master
+
+
 
             </div>
 
@@ -521,15 +538,23 @@
             </p>
 
 
+
             <!-- <div class="zc_01_31 clearfloat"> <span>用户名：<font color="#fe4242">*</font></span>
               <input id="loginId" type="text" placeholder="长度为4-30个字符，支持字母和数字组成，字母开头" maxlength="30">
             </div> -->
 
+<<<<<<< HEAD
             <div class="zc_01_31 clearfloat"><span>密码：<font color="#fe4242">*</font></span>
                 <input type="password" name="password" value="" class="" id="password" maxlength="18"
                        onkeyup="javascript:EvalPwd(this.value);"
                        onkeydown="if(event.keyCode==32) {event.returnValue = false;return false;}"
                        onpaste="return false" placeholder="长度为8-18个字符，强度要求中">
+=======
+            <div class="zc_01_31 clearfloat"> <span>密码：<font color="#fe4242">*</font></span>
+
+                <input type="password" name="password" value="" class="" id="password" maxlength="18" onkeyup="javascript:EvalPwd(this.value);" onkeydown="if(event.keyCode==32) {event.returnValue = false;return false;}" onpaste="return false" placeholder="长度为8-18个字符，强度要求中">
+>>>>>>> master
+
 
             </div>
 

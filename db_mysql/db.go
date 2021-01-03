@@ -1,6 +1,7 @@
 package db_mysql
 
 import (
+	"collaboration/entity"
 	"database/sql"
 	"github.com/astaxie/beego"
 	_ "github.com/go-sql-driver/mysql"
@@ -28,6 +29,23 @@ func Connect()  {//项目配置
 	}
 
 	Db = db
+}
+
+func SaveData(B entity.Block1,i int)( int64,error)  {
+	result,err := Db.Exec("insert into " +
+		"block1(" +
+		"height,hash1)" +
+		"values(" +
+		"?,?)",
+		B.Height,B.Hash1)
+	if err != nil {
+		return  0,err
+	}
+	rowId, err := result.RowsAffected()
+	if err != nil {
+		return 0, err
+	}
+	return rowId, nil
 }
 
 
