@@ -31,11 +31,8 @@ func (r *RegisterController) Post() {
 
 
 	fmt.Println("跳转到login页面")
-<<<<<<< HEAD
-	r.TplName = "login.html"
-=======
 
 	r.TplName = "login.html"   //
 
->>>>>>> liuyi
+
 }
