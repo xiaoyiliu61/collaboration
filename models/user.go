@@ -9,16 +9,9 @@ type User struct {
 	Id       int    `form:"id"`
 	Username string `form:"username"`
 	Password string `form:"password"`
-
+	Phone string `form:"phone"`
 }
 
-type User1 struct {
-	Userid int `form:"userid"`
-	Userpwd string `form:"userpwd"`
-
-    Phone string `form:"phone"`
-
-}
 
 
 /**
