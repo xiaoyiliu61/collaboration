@@ -9,15 +9,18 @@
     body {
         background-image: url("../static/img/timg.gif");
         background-size: cover;
-        opacity: 70%;
+        opacity: 65%;
     }
     #big {
         width: 940px;
-        height: 1000px;
-        background-color: #98A1B2;
+        height: 750px;
+        background-color: #000000;
         background-image: url("../static/img/1593932540520.jpeg");
+        background-size: 640px 750px;
+        opacity: 90%;
+        background-position: center;
+        background-repeat: no-repeat;
         margin: auto;
-
 
     }
     h1 {
@@ -37,8 +40,7 @@
     {
         float:left;
     }
-    a:link,a:visited
-    {
+    a:link,a:visited {
         display:block;
         width:227px;
         font-weight:bold;
@@ -49,8 +51,7 @@
         text-decoration:none;
         text-transform:uppercase;
     }
-    a:hover,a:active
-    {
+    a:hover,a:active {
         background-color:#cc0000;
     }
     #1 {
@@ -58,6 +59,19 @@
         height: 33px;
         margin: 200px;
     }
+    #center {
+        width: 400px;
+        height: 430px;
+        margin-top: 50px;
+        margin-left: 250px;
+        //background-color: #D93B30;
+    }
+    th,td {
+        text-align: center;
+        font-family: "微软雅黑";
+        color: #665052;
+    }
+
 </style>
 <body>
 <div id="big">
@@ -76,13 +90,33 @@
     </ul>
         </h3>
     </div>
-        <input style="height: 24px;width: 500px;margin-left: 150px;margin-top: 20px" type="text" name="Input">
+        <input style="height: 24px;width: 500px;margin-left: 150px;margin-top: 50px" type="text" name="Input">
         <input style="height: 30px;width: 100px;margin-left: 5px" type="submit" name="提交">
-    <input style="height: 24px;width: 500px;margin-left: 150px;margin-top: 30px" type="text" name="Input">
-    <input style="height: 30px;width: 100px;margin-left: 5px" type="submit" name="提交">
-    <input style="height: 24px;width: 500px;margin-left: 150px;margin-top: 30px" type="text" name="Input">
-    <input style="height: 30px;width: 100px;margin-left: 5px" type="submit" name="提交">    <input style="height: 24px;width: 500px;margin-left: 150px;margin-top: 30px" type="text" name="Input">
-    <input style="height: 30px;width: 100px;margin-left: 5px" type="submit" name="提交">
+    <h2>
+        <table id="center">
+            <tr>
+                <th>Hash</th>
+                <th>9845</th>
+            </tr>
+            <tr>
+                <td>Miner</td>
+                <td>Unkonwn</td>
+            </tr>
+            <tr>
+                <td>Version</td>
+                <td>ig38hej</td>
+            </tr>
+            <tr>
+                <td>Bits</td>
+                <td>7624274</td>
+            </tr>
+            <tr>
+                <td>Weight</td>
+                <td>2342342</td>
+            </tr>
+        </table>
+    </h2>
+
 </div>
 </body>
 </html>
